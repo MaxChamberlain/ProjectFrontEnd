@@ -65,12 +65,8 @@ function App() {
             <TableBody>
               {logs.map((log) => (
                 <tr>
-                  <td>{log.split("] ")[0] + "]"}</td>
-                  <td>
-                    {log.split("] ")[1].split("Public:")[0]}
-                    <span style={{ color: "#ff8000" }}>Public: </span>
-                    {log.split("] ")[1].split("Public:")[1]}
-                  </td>
+                  <td>{log.timestamp}</td>
+                  <td>{log.log}</td>
                 </tr>
               ))}
             </TableBody>
